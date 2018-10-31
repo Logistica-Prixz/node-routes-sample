@@ -21,6 +21,7 @@ router.route('/landing/:id')
   .get(function (req, res) {
     //Ponemos en la consola el método que estamos llamando, en este caso GET
     console.log('GET')
+    console.log(req.params.id);
     //Agregamos un header, se pueden agregar los headers que se quieran utilizando key,value en la función
     res.setHeader('Content-Type', 'application/json')
     //Devolmemos el json con el método y el id que solicitamos en la url
