@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/Logistica-Prixz/node-routes-sample/issues"
   },
-  "homepage": "https://github.com/Logistica-Prixz/node-routes-sample#readme"
+  "homepage": "https://github.com/Logistica-Prixz/node-routes-sample#readme",
+  "dependencies": {
+    "router": "^1.3.3"
+  }
 }
