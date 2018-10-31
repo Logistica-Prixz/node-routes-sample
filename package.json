@@ -1,0 +1,27 @@
+{
+  "name": "node-routes-sample",
+  "version": "1.0.0",
+  "description": "A simple sample of dynamic URLs using node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"This is not the command you are looking for\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Logistica-Prixz/node-routes-sample.git"
+  },
+  "keywords": [
+    "node",
+    "routes",
+    "sample",
+    "seo",
+    "urls",
+    "dynamic"
+  ],
+  "author": "Quantium",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Logistica-Prixz/node-routes-sample/issues"
+  },
+  "homepage": "https://github.com/Logistica-Prixz/node-routes-sample#readme"
+}
