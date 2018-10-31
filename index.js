@@ -42,5 +42,14 @@ router.route('/landing/:id')
     res.end(JSON.stringify({ method: 'ALL', id: req.params.id }))
   })
 
+//----------- Aquí vamos a registrar otra ruta, pero esta vez utilizando el módulo manejador.js -----------//
+var manejador = require('./manejador.js')
+var page = router.route('/:page')
+//Sólo vamos a utilizar el método get
+page.get(function (req,res){
+  //Llamamos la función filtrar() de manejador
+  manejador.filtrar(req,res)
+})
+
 //----------- Aquí hacemos que el servidor emita al puerto 8080 (O el que querramos) -----------//
 server.listen(8080)
