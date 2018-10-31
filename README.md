@@ -36,6 +36,44 @@ npm install
 
 ## Usage
 
+Para usar el ejemplo, una vez instalado, sólo hay que ejecutar el siguiente commando:
+
+```bash
+node index.js
+```
+
+Para el primer ejemplo de uso básico visitamos todas estas urls y vemos la salida en nuestra terminal:
+
+- [http://localhost:8080/landing/metformina](http://localhost:8080/landing/metformina)
+- [http://localhost:8080/landing/glucosa-alta](http://localhost:8080/landing/glucosa-alta)
+- [http://localhost:8080/landing/PedirMedicamentosEnLinea](http://localhost:8080/landing/PedirMedicamentosEnLinea)
+- [http://localhost:8080/landing/EsCalladaTimidaInocenteYtienelaMirada](http://localhost:8080/landing/EsCalladaTimidaInocenteYtienelaMirada)
+
+Para el ejemplo del uso del módulo sólo tenemos que visitar: [http://localhost:8080/cualqueirUrl](http://localhost:8080/loQueSea)
+
+Veremos algo como esto:
+
+![Any URL](images/anyurl.png)
+
+Si seguimos el link a index, nos llevará a la url [index.js](index.js) y podremos ver algo como lo que sigue:
+
+![Index.js URL](images/index.png)
+
+Podemos regresar o tipear cualquier url que no esté en la lista para ver la pantalla anterior.
+
+Si seguimos al link robots veremos:
+
+![Index.js URL](images/robots.png)
+
+Y si seguimos al link humans veremos:
+
+![Index.js URL](images/humans.png)
+
+
+
+
+### El código
+
 Es importante leer los comentarios en el código del archivo [index.js](index.js) primero. También recomiendo leer el historial de commits, esto se hace ejecutando el siguiente comando:
 
 ```bash
@@ -60,7 +98,7 @@ var server = http.createServer(function onRequest(req, res) {
 
 Para reigstrar una ruta se utiliza el método ```router.route(ruta)``` pasándole como parámetro la ruta que queremos registrar. Se pueden utilizar comodines, hay varias maneras, pero en este ejemplo nos enfocaremos en la más utilizada que es poner dos puntos y el nombre de la variable que queremos definir para tratar así la url.
 
-###Ejemplo
+### Ejemplo
 
 Si definimos ```router.route('inicio')``` todas las llamadas hechas a localhost:8080/inicio serán tratadas por esta ruta. Luego hay que definir el método, si no importa el método usamos la función all.
 
