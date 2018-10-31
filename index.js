@@ -33,6 +33,14 @@ router.route('/landing/:id')
     res.setHeader('Content-Type', 'application/json')
     res.end(JSON.stringify({ method: 'POST', id: req.params.id }))
   })
+  // Esto es lo mismo pero usando cualquier método (DELETE, PUT, HEAD, OPTIONS, etc)
+  // es sobreescrito si se agregan métodos como los de arriba
+  .all(function (req,res){
+    //... en este caso ALL (Es decir que se llamó la ruta con un método que no está definido y lo hace por default)
+    console.log('ALL')
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ method: 'ALL', id: req.params.id }))
+  })
 
 //----------- Aquí hacemos que el servidor emita al puerto 8080 (O el que querramos) -----------//
 server.listen(8080)
