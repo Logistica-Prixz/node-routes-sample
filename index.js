@@ -26,6 +26,13 @@ router.route('/landing/:id')
     //Devolmemos el json con el método y el id que solicitamos en la url
     res.end(JSON.stringify({ method: 'GET', id: req.params.id }))
   })
+  // Esto es lo mismo pero usando POST
+  .post(function (req, res) {
+    //... en este caso POST
+    console.log('POST')
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ method: 'POST', id: req.params.id }))
+  })
 
 //----------- Aquí hacemos que el servidor emita al puerto 8080 (O el que querramos) -----------//
 server.listen(8080)
